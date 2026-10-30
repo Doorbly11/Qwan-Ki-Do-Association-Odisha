@@ -19,8 +19,6 @@ import {
   ChevronRight,
   ChevronDown,
   ExternalLink,
-  Lock,
-  Settings,
   Compass,
   Sparkles,
 } from 'lucide-react';
@@ -29,7 +27,7 @@ interface NavbarProps {
   currentPage: string;
   onNavigate: (pageId: string) => void;
   onOpenBooking: () => void;
-  onOpenAdminGuide: () => void;
+  onOpenAdminGuide?: () => void;
 }
 
 interface NavPageItem {
@@ -783,7 +781,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Tray Footer: Fast Actions & Contact */}
-        <div className="p-4 border-t border-stone-200 bg-stone-50/80 space-y-2.5">
+        <div className="p-4 border-t border-stone-200 bg-stone-50/80 space-y-3">
           {/* Find a Dojo button */}
           <button
             onClick={() => handleNavClick('centres')}
@@ -793,28 +791,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>Find a Dojo in Odisha</span>
           </button>
 
-          {/* Settings button (Admin Protected) */}
-          <button
-            onClick={() => {
-              setTrayOpen(false);
-              onOpenAdminGuide();
-            }}
-            className="w-full py-2 px-3 text-xs font-medium text-slate-800 bg-white hover:bg-stone-100 border border-stone-300 rounded-md transition-colors flex items-center justify-between cursor-pointer shadow-2xs"
-          >
-            <div className="flex items-center gap-2">
-              <Settings className="w-3.5 h-3.5 text-[#008A68]" />
-              <span className="font-semibold">Settings</span>
-            </div>
-            <div className="flex items-center gap-1 text-[10px] text-stone-400">
-              <Lock className="w-3 h-3 text-stone-400" />
-              <span>Admin Protected</span>
-            </div>
-          </button>
-
           {/* Association Helpline */}
           <a
             href="tel:+919437021548"
-            className="flex items-center justify-center gap-2 pt-1 text-[11px] text-stone-600 hover:text-[#008A68] transition-colors"
+            className="flex items-center justify-center gap-2 pt-1 text-xs text-stone-600 hover:text-[#008A68] transition-colors"
           >
             <PhoneCall className="w-3.5 h-3.5 text-[#008A68]" />
             <span>Secretary Desk: +91 94370 21548</span>

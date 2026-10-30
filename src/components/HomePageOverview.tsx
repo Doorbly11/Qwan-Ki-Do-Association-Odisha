@@ -14,7 +14,6 @@ import {
   Image,
   MessageSquare,
   ArrowRight,
-  Sparkles,
   School,
   Building2,
   ChevronRight,
@@ -208,21 +207,13 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
         </div>
       </section>
 
-      {/* 3. Main Separate Pages Directory Grid */}
+      {/* 3. Main Pages Directory Grid */}
       <section className="py-14 sm:py-20 bg-[#FAF9F6] border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#008A68] text-xs font-semibold mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Full Website Directory</span>
-            </div>
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Explore Every Section as a Dedicated Page
+              Explore Qwan Ki Do Odisha
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-              Every area of Qwan Ki Do Association Odisha has been separated into its own comprehensive page.
-              Select any section below or use the top menu to view detailed information.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

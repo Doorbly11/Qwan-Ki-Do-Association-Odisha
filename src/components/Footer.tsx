@@ -239,11 +239,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdminGuide }) 
               </li>
               <li>
                 <button
-                  onClick={onOpenAdminGuide}
-                  className="text-emerald-400 hover:text-white transition-colors cursor-pointer flex items-center gap-1 font-medium"
+                  onClick={() => onNavigate('rules')}
+                  className="hover:text-emerald-400 transition-colors cursor-pointer"
                 >
-                  <Lock className="w-3 h-3 text-[#008A68]" />
-                  <span>Settings (CMS & Control)</span>
+                  Dojo Safety & Ethics Code
                 </button>
               </li>
               <li>
@@ -265,9 +264,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdminGuide }) 
       {/* Bottom Legal Bar */}
       <div className="border-t border-stone-800/80 bg-slate-950/80 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-          <p>
-            © {new Date().getFullYear()} Qwan Ki Do Association Odisha. All rights reserved. Registered under the Societies Registration Act XXI of 1860.
-          </p>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span>
+              © {new Date().getFullYear()} Qwan Ki Do Association Odisha. All rights reserved. Registered under the Societies Registration Act XXI of 1860.
+            </span>
+            <button
+              onClick={onOpenAdminGuide}
+              title="Official Administration Gate"
+              aria-label="Official Administration Gate"
+              className="text-stone-700 hover:text-stone-400 transition-colors p-0.5 rounded cursor-pointer shrink-0"
+            >
+              <Lock className="w-2.5 h-2.5" />
+            </button>
+          </div>
 
           <div className="flex items-center gap-6">
             <span>Sino-Vietnamese Traditional Martial Art</span>

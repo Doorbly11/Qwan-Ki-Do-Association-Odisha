@@ -102,9 +102,11 @@ export default function App() {
   // Sync hash changes (browser back/forward button support)
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '').trim() as PageId;
-      if (VALID_PAGES.includes(hash)) {
-        setCurrentPage(hash);
+      const hash = window.location.hash.replace('#', '').trim() as PageId | 'admin' | 'settings';
+      if (hash === 'admin' || hash === 'settings') {
+        setIsAdminGuideOpen(true);
+      } else if (VALID_PAGES.includes(hash as PageId)) {
+        setCurrentPage(hash as PageId);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (!hash) {
         setCurrentPage('home');
@@ -114,6 +116,19 @@ export default function App() {
 
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Admin secret keyboard shortcut (Ctrl+Shift+A or Cmd+Shift+A)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        setIsAdminGuideOpen((prev) => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   // Monitor scroll for back-to-top button
