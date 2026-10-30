@@ -1,0 +1,8 @@
+{
+  "name": "Qwan Ki Do Association Odisha",
+  "description": "Official portal for Qwan Ki Do Association Odisha — traditional Sino-Vietnamese martial arts training, belt grading syllabus, affiliated centres directory, and events in Odisha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
