@@ -63,16 +63,16 @@ export const RulesSection: React.FC = () => {
         >
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
-              <span>Discipline & Governance</span>
+              <span>Respect & Safety</span>
               <span aria-hidden="true">·</span>
-              <span>Dojo Etiquette</span>
+              <span>Dojo Manners</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-              Rules, Regulations & Dojo Code
+              Club Rules & Code of Conduct
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Tradition, safety, and mutual respect form the bedrock of Qwan Ki Do. These binding rules protect our practitioners,
-              uphold sportsmanship, and ensure every training centre remains a sanctuary of personal growth.
+              Respect, discipline, and safety are the foundation of Qwan Ki Do. These rules keep all students safe,
+              build good sportsmanship, and ensure every training hall is a welcoming place to learn and grow.
             </p>
           </div>
 
@@ -93,7 +93,7 @@ export const RulesSection: React.FC = () => {
             <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Search regulations (e.g. bowing, uniform, bullying, sparring gear, medical...)"
+              placeholder="Search rules (e.g. bowing, uniform, bullying, sparring gear, medical...)"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-10 pr-4 py-2 text-sm bg-stone-50 border border-stone-200 rounded-lg text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-[#008A68] focus:bg-white"
@@ -102,7 +102,7 @@ export const RulesSection: React.FC = () => {
 
           {/* Role Segmented Buttons */}
           <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-stone-100 text-xs">
-            <span className="text-slate-400 font-medium mr-1">Filter by Stakeholder:</span>
+            <span className="text-slate-400 font-medium mr-1">Filter by Role:</span>
             <button
               onClick={() => setActiveCategory('all')}
               className={`px-3 py-1 rounded-md transition-colors cursor-pointer ${
@@ -111,7 +111,7 @@ export const RulesSection: React.FC = () => {
                   : 'bg-stone-100 text-slate-600 hover:bg-stone-200'
               }`}
             >
-              All Code
+              All Rules
             </button>
             <button
               onClick={() => setActiveCategory('students')}
@@ -250,9 +250,9 @@ export const RulesSection: React.FC = () => {
           <div className="flex items-start gap-3">
             <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold text-slate-900">Disciplinary Concerns & Safety Inquiries:</p>
+              <p className="font-semibold text-slate-900">Safety Concerns & Help:</p>
               <p className="text-slate-500 mt-0.5">
-                Any breach of the anti-bullying code, unauthorized teaching claims, or safety issues can be directly reported to the Ethics Commissioner at <a href="mailto:ethics@qwankidoodisha.com" className="text-[#008A68] underline">ethics@qwankidoodisha.com</a>.
+                If you ever notice bullying, unsafe behavior, or an unapproved instructor using our name, you can contact our ethics committee directly at <a href="mailto:ethics@qwankidoodisha.com" className="text-[#008A68] underline">ethics@qwankidoodisha.com</a>.
               </p>
             </div>
           </div>

@@ -17,17 +17,16 @@ export const AboutSection: React.FC = () => {
           className="max-w-3xl mb-12"
         >
           <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
-            <span>Authentic Heritage & Lineage</span>
+            <span>Our History & Tradition</span>
             <span aria-hidden="true">·</span>
             <span>Est. 1981</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-            About Qwan Ki Do (Quán Khí Đạo)
+            About Qwan Ki Do
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Qwan Ki Do is a comprehensive Sino-Vietnamese martial art that synthesizes four thousand years
-            of Vietnamese martial arts culture (Võ Thuật Cổ Truyền Việt Nam) with Chinese martial traditions.
-            It is a discipline of body, mind, and spirit—not a method for uncontrolled combat.
+            Qwan Ki Do is a traditional martial art that brings together Vietnamese and Chinese martial traditions.
+            It trains your body, clears your mind, and builds a kind heart. It is taught for health, respect, and practical self-defense—never for street fighting.
           </p>
         </motion.div>
 
@@ -41,7 +40,7 @@ export const AboutSection: React.FC = () => {
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Sino-Vietnamese Heritage
+            Tradition & Roots
           </button>
           <button
             onClick={() => setActiveTab('founder')}
@@ -61,7 +60,7 @@ export const AboutSection: React.FC = () => {
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Philosophy & Mindset
+            Values & Mindset
           </button>
           <button
             onClick={() => setActiveTab('timeline')}
@@ -90,29 +89,29 @@ export const AboutSection: React.FC = () => {
               <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
                 <div className="space-y-4 text-slate-700 leading-relaxed text-sm sm:text-base">
                   <p>
-                    The phrase <strong>Quán Khí Đạo</strong> (Qwan Ki Do) translates to <em>“The Way of Energy and Spirit Cultivation”</em>.
-                    It represents an unbroken bridge between ancient martial traditions and contemporary physical education.
+                    The name <strong>Quán Khí Đạo</strong> (Qwan Ki Do) means <em>“The Way of Energy and Spirit Cultivation”</em>.
+                    It brings together centuries of martial wisdom with modern, safe physical fitness.
                   </p>
                   <p>
-                    Rooted in the historical encounters of Chinese and Vietnamese martial masters, Qwan Ki Do encompasses:
+                    Qwan Ki Do includes three key elements:
                   </p>
                   <ul className="space-y-3 pt-2">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
                       <span>
-                        <strong>Võ Cổ Truyền (Vietnamese Traditional Roots):</strong> Low rooted stances, sweeping leg techniques (Cước Pháp), evasive circular footwork, and acrobatic scissor kicks (Đòn Chân).
+                        <strong>Traditional Stances & Kicks:</strong> Strong low stances, quick footwork, and acrobatic leg sweeps that build strong balance.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
                       <span>
-                        <strong>Chinese Martial Traditions (Thiếu Lâm & Nga Mi):</strong> Precise hand strikes, palm heel maneuvers, animal mimicry (Tiger, Crane, Monkey, Snake, Dragon), and internal breath cultivation (Khí Công).
+                        <strong>Animal Moves & Breathing:</strong> Hand strikes inspired by the Tiger, Crane, Monkey, Snake, and Dragon, plus calming breathing exercises (Khí Công).
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
                       <span>
-                        <strong>Cổ Võ Đạo (Classical Weapons):</strong> Systematic study of the traditional long staff (Bổng), short double sticks (Song Côn), and broadsword for senior authorized practitioners.
+                        <strong>Traditional Weapons:</strong> Safe practice with long staff (Bổng), double sticks (Song Côn), and wooden swords for authorized senior students.
                       </span>
                     </li>
                   </ul>
@@ -122,12 +121,12 @@ export const AboutSection: React.FC = () => {
                 <div className="p-5 bg-stone-50 border border-stone-200 rounded-lg">
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-900 mb-1">
                     <Scale className="w-4 h-4 text-[#008A68]" />
-                    <span>The Fundamental Distinction: Martial Art vs. Uncontrolled Fighting</span>
+                    <span>The Key Difference: Martial Arts vs. Fighting</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Qwan Ki Do teaches that true martial power is manifested through <strong>restraint, emotional mastery, and respect for life</strong>.
-                    Unlike unsanctioned brawling or aggressive fighting sports, our training strictly forbids aggression, intimidation, or needless conflict.
-                    Physical techniques are practiced within a safe pedagogical framework to nurture health, confidence, and moral integrity.
+                    Qwan Ki Do teaches that real strength comes from <strong>self-control, patience, and kindness</strong>.
+                    Unlike aggressive street fighting, our training strictly forbids violence, teasing, or bullying.
+                    All moves are practiced safely on mats to build health, confidence, and good character.
                   </p>
                 </div>
               </div>
@@ -214,10 +213,9 @@ export const AboutSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-md bg-[#008A68]/10 flex items-center justify-center text-[#008A68]">
                   <Heart className="w-5 h-5" />
                 </div>
-                <h3 className="font-serif text-lg font-bold text-slate-900">TÂM — Heart & Moral Virtue</h3>
+                <h3 className="font-serif text-lg font-bold text-slate-900">TÂM — Kind Heart & Honesty</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Benevolence, compassion, and humility. The martial artist must cultivate an upright heart that protects the vulnerable,
-                  practices forgiveness, and acts with honesty in all worldly relationships.
+                  Kindness, honesty, and humility. A true martial artist protects others, stays humble, practices forgiveness, and treats everyone with fairness and respect.
                 </p>
               </div>
 
@@ -225,10 +223,9 @@ export const AboutSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-md bg-[#008A68]/10 flex items-center justify-center text-[#008A68]">
                   <Shield className="w-5 h-5" />
                 </div>
-                <h3 className="font-serif text-lg font-bold text-slate-900">THỂ — Physical Mastery</h3>
+                <h3 className="font-serif text-lg font-bold text-slate-900">THỂ — Healthy Body & Fitness</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Stamina, suppleness, agility, and resilient health. Through rigorous physical conditioning, the body becomes a reliable
-                  instrument capable of enduring hardship while remaining relaxed and fluid under stress.
+                  Strength, stamina, and flexibility. Regular practice keeps your muscles strong, your joints healthy, and your body ready to handle daily work and sports with ease.
                 </p>
               </div>
 
@@ -236,10 +233,9 @@ export const AboutSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-md bg-[#008A68]/10 flex items-center justify-center text-[#008A68]">
                   <Sparkles className="w-5 h-5" />
                 </div>
-                <h3 className="font-serif text-lg font-bold text-slate-900">TRÍ — Mind & Clarity</h3>
+                <h3 className="font-serif text-lg font-bold text-slate-900">TRÍ — Clear & Calm Mind</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Concentration, critical discernment, and emotional equilibrium. Developing a calm, alert mind that makes wise decisions
-                  under pressure without succumbing to anger, rash impulse, or vanity.
+                  Focus, patience, and good judgment. You learn to stay calm when stressed, think clearly before acting, and avoid anger or impulsive arguments.
                 </p>
               </div>
             </motion.div>

@@ -23,6 +23,11 @@ import {
   GalleryMedia,
   GoverningMember,
 } from '../types';
+import {
+  isSupabaseConfigured,
+  insertEnquirySupabase,
+  updateEnquiryStatusSupabase,
+} from '../lib/supabase';
 
 export interface StoredEnquiry {
   id: string;
@@ -242,7 +247,37 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return saved !== null ? JSON.parse(saved) : true;
   });
 
-  // Persist to localStorage
+  // Load initial state from Cloud SQL Backend API
+  useEffect(() => {
+    let isMounted = true;
+    fetch('/api/state')
+      .then((res) => {
+        if (!res.ok) throw new Error('API request failed');
+        return res.json();
+      })
+      .then((data) => {
+        if (!isMounted) return;
+        if (data.trainingCentres && data.trainingCentres.length > 0) setTrainingCentres(data.trainingCentres);
+        if (data.associationEvents && data.associationEvents.length > 0) setAssociationEvents(data.associationEvents);
+        if (data.newsArticles && data.newsArticles.length > 0) setNewsArticles(data.newsArticles);
+        if (data.galleryItems && data.galleryItems.length > 0) setGalleryItems(data.galleryItems);
+        if (data.enquiries && data.enquiries.length > 0) setEnquiries(data.enquiries);
+        if (data.announcementText) setAnnouncementText(data.announcementText);
+        if (data.announcementVisible !== undefined) setAnnouncementVisible(data.announcementVisible);
+        if (data.programmes && data.programmes.length > 0) setProgrammes(data.programmes);
+        if (data.beltRanks && data.beltRanks.length > 0) setBeltRanks(data.beltRanks);
+        if (data.governingMembers && data.governingMembers.length > 0) setGoverningMembers(data.governingMembers);
+      })
+      .catch((err) => {
+        console.warn('Backend Cloud SQL offline or seeding in progress, using cached state:', err);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  // Persist to localStorage as local mirror
   useEffect(() => {
     localStorage.setItem(`${STORAGE_PREFIX}info`, JSON.stringify(associationInfo));
   }, [associationInfo]);
@@ -312,36 +347,72 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setGoverningMembers((prev) => prev.filter((m) => m.id !== id));
   };
 
-  // Centre CRUD
+  // Centre CRUD with Cloud SQL Persistence
   const addCentre = (centreData: Omit<TrainingCentre, 'id'>) => {
     const newId = `dojo-${Date.now()}`;
-    setTrainingCentres((prev) => [{ ...centreData, id: newId }, ...prev]);
+    const newCentre = { ...centreData, id: newId };
+    setTrainingCentres((prev) => [newCentre, ...prev]);
+
+    fetch('/api/centres', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newCentre),
+    }).catch((err) => console.error('Cloud SQL centre save error:', err));
   };
 
   const updateCentre = (id: string, updated: Partial<TrainingCentre>) => {
-    setTrainingCentres((prev) =>
-      prev.map((c) => (c.id === id ? { ...c, ...updated } : c))
-    );
+    setTrainingCentres((prev) => {
+      const next = prev.map((c) => (c.id === id ? { ...c, ...updated } : c));
+      const target = next.find((c) => c.id === id);
+      if (target) {
+        fetch('/api/centres', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(target),
+        }).catch((err) => console.error('Cloud SQL centre update error:', err));
+      }
+      return next;
+    });
   };
 
   const deleteCentre = (id: string) => {
     setTrainingCentres((prev) => prev.filter((c) => c.id !== id));
+    fetch(`/api/centres/${id}`, { method: 'DELETE' })
+      .catch((err) => console.error('Cloud SQL centre delete error:', err));
   };
 
-  // Event CRUD
+  // Event CRUD with Cloud SQL Persistence
   const addEvent = (eventData: Omit<AssociationEvent, 'id'>) => {
     const newId = `event-${Date.now()}`;
-    setAssociationEvents((prev) => [{ ...eventData, id: newId }, ...prev]);
+    const newEvent = { ...eventData, id: newId };
+    setAssociationEvents((prev) => [newEvent, ...prev]);
+
+    fetch('/api/events', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newEvent),
+    }).catch((err) => console.error('Cloud SQL event save error:', err));
   };
 
   const updateEvent = (id: string, updated: Partial<AssociationEvent>) => {
-    setAssociationEvents((prev) =>
-      prev.map((e) => (e.id === id ? { ...e, ...updated } : e))
-    );
+    setAssociationEvents((prev) => {
+      const next = prev.map((e) => (e.id === id ? { ...e, ...updated } : e));
+      const target = next.find((e) => e.id === id);
+      if (target) {
+        fetch('/api/events', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(target),
+        }).catch((err) => console.error('Cloud SQL event update error:', err));
+      }
+      return next;
+    });
   };
 
   const deleteEvent = (id: string) => {
     setAssociationEvents((prev) => prev.filter((e) => e.id !== id));
+    fetch(`/api/events/${id}`, { method: 'DELETE' })
+      .catch((err) => console.error('Cloud SQL event delete error:', err));
   };
 
   // Belt CRUD
@@ -451,9 +522,15 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const updateAnnouncement = (text: string, visible: boolean) => {
     setAnnouncementText(text);
     setAnnouncementVisible(visible);
+
+    fetch('/api/announcement', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, visible }),
+    }).catch((err) => console.error('Cloud SQL announcement update error:', err));
   };
 
-  // Enquiries
+  // Enquiries with Cloud SQL Persistence
   const addEnquiry = (enquiryData: Omit<StoredEnquiry, 'id' | 'createdAt' | 'isContacted'>) => {
     const prefix = enquiryData.type === 'student' ? 'QKD-ADM' : 'QKD-AFF';
     const id = `${prefix}-${Math.floor(100000 + Math.random() * 900000)}`;
@@ -464,13 +541,48 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       isContacted: false,
     };
     setEnquiries((prev) => [newEnquiry, ...prev]);
+
+    // Persist to Supabase if configured
+    if (isSupabaseConfigured()) {
+      insertEnquirySupabase(newEnquiry).catch((err) =>
+        console.error('Supabase enquiry sync error:', err)
+      );
+    }
+
+    // Persist to Cloud SQL backend
+    fetch('/api/enquiries', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newEnquiry),
+    }).catch((err) => console.error('Cloud SQL enquiry save error:', err));
+
     return id;
   };
 
   const toggleEnquiryContacted = (id: string) => {
+    let nextStatus = false;
     setEnquiries((prev) =>
-      prev.map((e) => (e.id === id ? { ...e, isContacted: !e.isContacted } : e))
+      prev.map((e) => {
+        if (e.id === id) {
+          nextStatus = !e.isContacted;
+          return { ...e, isContacted: nextStatus };
+        }
+        return e;
+      })
     );
+
+    // Sync with Supabase if configured
+    if (isSupabaseConfigured()) {
+      updateEnquiryStatusSupabase(id, nextStatus).catch((err) =>
+        console.error('Supabase status update error:', err)
+      );
+    }
+
+    fetch(`/api/enquiries/${id}/status`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ isContacted: nextStatus }),
+    }).catch((err) => console.error('Cloud SQL enquiry status update error:', err));
   };
 
   const deleteEnquiry = (id: string) => {

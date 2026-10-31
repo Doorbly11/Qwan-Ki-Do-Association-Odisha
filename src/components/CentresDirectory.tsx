@@ -50,16 +50,16 @@ export const CentresDirectory: React.FC<CentresDirectoryProps> = ({
           className="max-w-3xl mb-12"
         >
           <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
-            <span>Verified Dojos & Academies</span>
+            <span>Approved Training Clubs</span>
             <span aria-hidden="true">·</span>
             <span>Odisha State Directory</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-            Affiliated Qwan Ki Do Training Centres
+            Official Qwan Ki Do Training Centres
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Locate authorized Qwan Ki Do training centres across Odisha. Every listed dojo is verified by the State
-            Technical Committee, featuring licensed instructors, certified safety mats, and official curriculum delivery.
+            Find official Qwan Ki Do clubs in your city or district. Every listed club is approved by our State
+            Association, with licensed instructors, safety mats, and recognized belt examinations.
           </p>
         </motion.div>
 
@@ -261,9 +261,9 @@ export const CentresDirectory: React.FC<CentresDirectoryProps> = ({
         <div className="mt-12 p-4 bg-stone-100/70 border border-stone-200 rounded-lg text-xs text-slate-600 flex items-start gap-3">
           <ShieldCheck className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
           <div>
-            <p className="font-semibold text-slate-800">Affiliation Verification Notice:</p>
+            <p className="font-semibold text-slate-800">Official Club Verification Notice:</p>
             <p className="mt-0.5">
-              Only dojos holding an active certificate issued by Qwan Ki Do Association Odisha are authorized to use the registered logo, prepare candidates for official belt gradings, and field competitors in state and national championships. Always verify the instructor’s credentials.
+              Only clubs with an official certificate from Qwan Ki Do Association Odisha can use our logo, hold valid belt exams, and enter students into state and national tournaments. You can always ask to see the instructor's teaching card.
             </p>
           </div>
         </div>

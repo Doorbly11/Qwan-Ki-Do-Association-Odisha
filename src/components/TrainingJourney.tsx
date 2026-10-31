@@ -24,34 +24,34 @@ export const TrainingJourney: React.FC = () => {
           className="max-w-3xl mb-12"
         >
           <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
-            <span>Pedagogical Structure</span>
+            <span>How You Learn</span>
             <span aria-hidden="true">·</span>
-            <span>6 Disciplined Stages</span>
+            <span>6 Step-by-Step Stages</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-            Complete Training Procedure
+            6-Stage Training Journey
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Our structured step-by-step methodology ensures students progress systematically—building strong stances,
-            flawless technique, and ethical resilience without rushing or skipping essential foundations.
+            You will learn step-by-step at your own comfortable pace. Each stage helps you build strong stances,
+            clean moves, and good habits before moving up to the next level.
           </p>
         </motion.div>
 
         {/* ========================================================================= */}
-        {/* GRAPHIC DESIGN: Visual Martial Arts Pedagogical Pathway Diagram           */}
+        {/* GRAPHIC DESIGN: Visual Martial Arts Pathway Diagram                       */}
         {/* ========================================================================= */}
         <div className="mb-10 bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-xs">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-stone-100">
             <div>
               <span className="text-xs font-mono uppercase tracking-wider text-[#008A68] font-bold">
-                Sequential Pedagogical Architecture
+                Your Learning Path
               </span>
               <h3 className="font-serif text-lg sm:text-xl font-bold text-slate-900 mt-0.5">
-                The Six Pillars of Mastery (Lộ Trình Võ Học)
+                The 6 Steps from Beginner to Master (Lộ Trình Võ Học)
               </h3>
             </div>
             <span className="text-xs text-stone-500 font-mono">
-              Click any stage to inspect technical requirements
+              Click any step to see what you will learn
             </span>
           </div>
 

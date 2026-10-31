@@ -64,16 +64,16 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenFullGaller
           >
             <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
               <Camera className="w-4 h-4" />
-              <span>Visual Chronicle</span>
+              <span>Photo Gallery</span>
               <span aria-hidden="true">·</span>
-              <span>Documentary Gallery</span>
+              <span>Training in Odisha</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-              Dojo Life, Gradings & Championships
+              Training, Belt Exams & Tournaments
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Authentic moments of disciplined practice, ceremonial belt examinations, and competitive spirit
-              captured across affiliated training centres throughout Odisha.
+              Real photos of daily training, belt promotion exams, and state tournaments
+              from Qwan Ki Do clubs across Odisha.
             </p>
           </motion.div>
 

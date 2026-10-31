@@ -69,11 +69,11 @@ export const EventsSection: React.FC = () => {
             <span>2026 - 2027</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-            Events, Championships & Gradings
+            Upcoming Tournaments & Belt Exams
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Stay updated with state-sanctioned championships, centralized belt grading convocations, technical clinics,
-            and referee seminars organized under the authority of Qwan Ki Do Association Odisha.
+            Find dates and details for state championships, belt examinations, teacher training workshops,
+            and referee clinics held across Odisha.
           </p>
         </div>
 

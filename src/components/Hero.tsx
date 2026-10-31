@@ -66,21 +66,21 @@ const BANNER_SLIDES: BannerSlide[] = [
     slideNumber: '01',
     tabLabel: 'Discipline & Youth',
     tabIcon: Target,
-    badge: 'Official State Martial Arts Association of Odisha',
-    badgeSubtext: 'Regd. No. 22194/1981',
-    titleLine1: 'DISCIPLINE YOUR BODY.',
-    titleLine2: 'STRENGTHEN YOUR MIND.',
-    titleLine3: 'TRANSFORM YOUR LIFE.',
-    colorLine2: 'text-[#008A68]',
-    colorLine3: 'text-amber-700',
+    badge: 'QWANKIDIO ASSOCIATION ODISHA',
+    badgeSubtext: 'MARTIAL ARTS. REAL PURPOSE.',
+    titleLine1: 'BUILD STRENGTH. DEVELOP',
+    titleLine2: 'DISCIPLINE. MASTER SELF-',
+    titleLine3: 'DEFENCE.',
+    colorLine2: 'text-white',
+    colorLine3: 'text-[#E5A93C]',
     description:
-      'Welcome to the official martial arts academy of Odisha. Learn self-defense, build rock-solid focus for studies, and develop lifelong confidence under state-certified instructors across all districts.',
-    culturalNoteTitle: 'Odisha’s Warrior Spirit',
+      'Welcome to Qwankidio Association Odisha – Empowering individuals through martial arts training, physical fitness, confidence and self-defence education.',
+    culturalNoteTitle: 'Odisha’s Warrior Heritage',
     culturalNoteText:
       'Carrying forward the ancient athletic Paika warrior discipline of Odisha with modern Sino-Vietnamese Qwan Ki Do training for health, respect, and character.',
-    primaryCtaText: 'Find a Dojo in Odisha',
+    primaryCtaText: 'JOIN OUR ASSOCIATION',
     primaryCtaAction: 'findCentre',
-    secondaryCtaText: 'See Belt Syllabus',
+    secondaryCtaText: 'EXPLORE SYLLABUS',
     secondaryCtaAction: 'exploreSyllabus',
     districtPill: 'Active in Bhubaneswar, Cuttack, Puri, Rourkela & 10+ districts',
     sideCardTitle: 'Core Student Disciplines',
@@ -91,19 +91,19 @@ const BANNER_SLIDES: BannerSlide[] = [
         icon: Shield,
         title: 'Practical Self-Defense',
         desc: 'Street awareness, escape grips, and quick reflex techniques.',
-        tagColor: 'text-emerald-700 bg-emerald-50 border-emerald-200',
+        tagColor: 'text-amber-400 bg-amber-950/40 border-amber-500/30',
       },
       {
         icon: Target,
         title: 'Calm Mental Focus',
         desc: 'Improves school study attention, respect for elders, and daily discipline.',
-        tagColor: 'text-blue-700 bg-blue-50 border-blue-200',
+        tagColor: 'text-emerald-400 bg-emerald-950/40 border-emerald-500/30',
       },
       {
         icon: Heart,
         title: 'Total Body Fitness & Stamina',
         desc: 'Healthy stamina, flexible joints, and natural athletic energy.',
-        tagColor: 'text-amber-700 bg-amber-50 border-amber-200',
+        tagColor: 'text-red-400 bg-red-950/40 border-red-500/30',
       },
     ],
     specBadge: {
@@ -358,107 +358,105 @@ export const Hero: React.FC<HeroProps> = ({
     <section
       id="hero"
       aria-label="Qwan Ki Do Odisha Hero Banner"
-      className="relative bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5EFE6] text-slate-800 overflow-hidden border-b border-amber-200/70 font-['Poppins',sans-serif]"
+      className="relative bg-[#0B0C0E] text-white overflow-hidden border-b border-white/10 font-['Poppins',sans-serif]"
     >
       {/* ========================================================================= */}
-      {/* 1. ODISHA TRADITIONAL GEOMETRIC MOTIF BORDER (IKKAT / TEMPLE ART IN LIGHT SAND) */}
+      {/* 1. CINEMATIC MARTIAL ARTIST BACKGROUND IMAGE WITH DRAMATIC DARK GRADIENT  */}
       {/* ========================================================================= */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-40"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(180, 83, 9, 0.08) 1.5px, transparent 0)`,
-          backgroundSize: '28px 28px',
-        }}
-      />
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/src/assets/images/hero_martial_artist_1793481886692.jpg"
+          alt="Martial arts practitioner in black belt"
+          className="w-full h-full object-cover object-right md:object-center opacity-35 filter contrast-125"
+        />
+        {/* Multi-stage dark vignette & gradient so text is razor sharp */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/90 to-[#0B0C0E]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-transparent to-[#0B0C0E]/70" />
+      </div>
 
-      {/* Traditional Odisha Temple Border Strip (Top) */}
-      <div className="w-full h-2 bg-gradient-to-r from-amber-600 via-[#008A68] to-amber-600 opacity-80" />
-
-      {/* Subtle Sandstone Konark Motif Watermark (Light and Soft) */}
-      <div
-        aria-hidden="true"
-        className="absolute -right-24 -bottom-24 w-96 h-96 rounded-full border-[18px] border-amber-200/30 opacity-30 pointer-events-none"
-      />
+      {/* Traditional Odisha Temple Border Strip (Top Accent) */}
+      <div className="relative z-10 w-full h-1 bg-gradient-to-r from-amber-500 via-[#E5252A] to-amber-500 opacity-80" />
 
       {/* ========================================================================= */}
-      {/* 2. MAIN ANIMATED SLIDE VIEWPORT                                           */}
+      {/* 2. MAIN ANIMATED SLIDE VIEWPORT (FRAMER LAYOUT & TYPOGRAPHY)              */}
       {/* ========================================================================= */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-12 sm:pb-16 min-h-[520px]">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-14 sm:pb-20 min-h-[560px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide.id}
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
+            exit={{ opacity: 0, y: -14 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
           >
             {/* ========================================================================= */}
-            {/* LEFT: Slide Headline, Description, Cultural Note & Action CTAs            */}
+            {/* LEFT: Framer Kicker, Massive Impact Headline & Square Action Buttons      */}
             {/* ========================================================================= */}
             <div className="lg:col-span-7">
-              {/* Slide Affiliation Badge (No logo here - logo strictly in header) */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100/90 border border-amber-300 text-amber-900 text-xs sm:text-sm font-semibold mb-4 shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-[#008A68] animate-pulse shrink-0" />
+              {/* Kicker Headline (Matching Framer screenshot) */}
+              <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-[#E5A93C] mb-4">
                 <span>{currentSlide.badge}</span>
-                <span className="text-amber-600 hidden sm:inline">·</span>
-                <span className="text-stone-600 font-normal hidden sm:inline">{currentSlide.badgeSubtext}</span>
+                <span className="text-white/40">/</span>
+                <span className="text-stone-300">{currentSlide.badgeSubtext}</span>
               </div>
 
-              {/* Master Headline (Poppins font, light clean styling) */}
+              {/* Master Headline (Massive, Bold, Condensed, Uppercase) */}
               <h1
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-[62px] font-black text-white tracking-tight leading-[0.98] sm:leading-[0.95] mb-5 uppercase"
                 style={{ textWrap: 'balance' }}
               >
-                <span className="block text-slate-900">{currentSlide.titleLine1}</span>
+                <span className="block text-white">{currentSlide.titleLine1}</span>
                 <span className={`block ${currentSlide.colorLine2}`}>{currentSlide.titleLine2}</span>
                 <span className={`block ${currentSlide.colorLine3}`}>{currentSlide.titleLine3}</span>
               </h1>
 
-              {/* Simple English Subtitle */}
-              <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal mb-6 max-w-2xl">
+              {/* Clean Subtitle */}
+              <p className="text-base sm:text-lg text-stone-300 leading-relaxed font-normal mb-6 max-w-2xl">
                 {currentSlide.description}
               </p>
 
               {/* Odisha Cultural Connection Box */}
-              <div className="bg-white/90 border border-amber-200/90 rounded-xl p-3.5 sm:p-4 mb-7 shadow-2xs">
+              <div className="bg-[#14161A]/85 border border-white/15 p-3.5 sm:p-4 mb-7 backdrop-blur-md rounded-none shadow-lg">
                 <div className="flex items-start gap-2.5">
-                  <Sparkles className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                  <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                    <strong className="text-slate-900 font-semibold">{currentSlide.culturalNoteTitle}: </strong>
+                  <Sparkles className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                    <strong className="text-white font-semibold">{currentSlide.culturalNoteTitle}: </strong>
                     {currentSlide.culturalNoteText}
                   </p>
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons - SQUARE CORNERS AS REQUESTED BY USER */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-7">
+                {/* Square Red CTA Button */}
                 <button
                   onClick={() => handleActionClick(currentSlide.primaryCtaAction)}
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#008A68] hover:bg-[#007256] text-white font-semibold text-sm sm:text-base rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#E5252A] hover:bg-[#D01F24] active:bg-[#B8191E] text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-none shadow-xl hover:shadow-2xl transition-all cursor-pointer whitespace-nowrap"
                 >
-                  <MapPin className="w-5 h-5 text-emerald-200" />
+                  <MapPin className="w-4 h-4 text-white/80" />
                   <span>{currentSlide.primaryCtaText}</span>
                   <ChevronRight className="w-4 h-4" />
                 </button>
 
+                {/* Square Secondary Button */}
                 <button
                   onClick={() => handleActionClick(currentSlide.secondaryCtaAction)}
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-white hover:bg-stone-50 text-slate-800 font-medium text-sm sm:text-base rounded-xl border border-stone-300 shadow-2xs hover:shadow-xs transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2.5 px-7 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm tracking-wider uppercase rounded-none border border-white/30 hover:border-white shadow-sm transition-all cursor-pointer backdrop-blur-xs whitespace-nowrap"
                 >
-                  <BookOpen className="w-5 h-5 text-amber-600" />
+                  <BookOpen className="w-4 h-4 text-amber-400" />
                   <span>{currentSlide.secondaryCtaText}</span>
                 </button>
               </div>
 
               {/* District Availability Pill & Statewide Expansion Link */}
-              <div className="flex flex-wrap items-center gap-2.5 text-xs text-stone-600">
+              <div className="flex flex-wrap items-center gap-2.5 text-xs text-stone-400">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
-                  <span className="font-semibold text-slate-900">Coverage:</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+                  <span className="font-semibold text-white">Coverage:</span>
                   <span>{currentSlide.districtPill}</span>
                 </div>
-                <span className="hidden sm:inline text-stone-300">·</span>
+                <span className="hidden sm:inline text-stone-600">·</span>
                 <button
                   onClick={() => {
                     if (onExpansionClick) {
@@ -468,30 +466,30 @@ export const Hero: React.FC<HeroProps> = ({
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="inline-flex items-center gap-1 font-semibold text-amber-800 hover:text-amber-950 underline underline-offset-2 decoration-amber-400 cursor-pointer"
+                  className="inline-flex items-center gap-1 font-semibold text-amber-400 hover:text-amber-300 underline underline-offset-2 decoration-amber-400 cursor-pointer"
                 >
-                  <Compass className="w-3.5 h-3.5 text-amber-600" />
+                  <Compass className="w-3.5 h-3.5 text-amber-400" />
                   <span>Expanding Across All 30 Districts &rarr;</span>
                 </button>
               </div>
             </div>
 
             {/* ========================================================================= */}
-            {/* RIGHT: Slide Feature Spotlight Card (Light Clean Odisha Palette)          */}
+            {/* RIGHT: Slide Feature Spotlight Card (Dark Glassmorphic Aesthetic)         */}
             {/* ========================================================================= */}
             <div className="lg:col-span-5">
-              <div className="bg-white rounded-2xl border border-amber-200 shadow-md p-5 sm:p-6 transition-all">
+              <div className="bg-[#121316]/90 rounded-none border border-white/15 shadow-2xl p-5 sm:p-6 backdrop-blur-md transition-all">
                 {/* Header of Feature Card */}
-                <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-stone-100">
+                <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-white/10">
                   <div>
-                    <h2 className="text-lg font-bold text-slate-900 leading-snug">
+                    <h2 className="text-lg font-bold text-white leading-snug">
                       {currentSlide.sideCardTitle}
                     </h2>
-                    <p className="text-xs text-stone-500 mt-0.5">
+                    <p className="text-xs text-stone-400 mt-0.5">
                       {currentSlide.sideCardSubtitle}
                     </p>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold border border-amber-300">
+                  <span className="px-2.5 py-1 rounded-none bg-amber-500/20 text-amber-300 text-[11px] font-bold border border-amber-500/30 uppercase tracking-wider">
                     {currentSlide.sideCardTag}
                   </span>
                 </div>
@@ -503,17 +501,17 @@ export const Hero: React.FC<HeroProps> = ({
                     return (
                       <div
                         key={fIdx}
-                        className="p-3.5 rounded-xl bg-stone-50/70 border border-stone-200/80 hover:bg-amber-50/40 transition-colors"
+                        className="p-3.5 rounded-none bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
                       >
                         <div className="flex items-start gap-3">
-                          <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border ${feat.tagColor}`}>
+                          <div className={`w-8 h-8 rounded-none flex items-center justify-center shrink-0 border ${feat.tagColor}`}>
                             <FeatIcon className="w-4 h-4" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">
+                            <h3 className="text-xs sm:text-sm font-bold text-white leading-snug">
                               {feat.title}
                             </h3>
-                            <p className="text-xs text-stone-600 leading-relaxed mt-0.5">
+                            <p className="text-xs text-stone-400 leading-relaxed mt-0.5">
                               {feat.desc}
                             </p>
                           </div>
@@ -523,35 +521,31 @@ export const Hero: React.FC<HeroProps> = ({
                   })}
                 </div>
 
-                {/* Specimen Trust Seal for this category */}
-                <div className="mt-4 p-3 bg-gradient-to-r from-amber-50/80 via-stone-50 to-emerald-50/80 rounded-xl border border-amber-200 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-white border border-amber-300 shadow-2xs flex items-center justify-center shrink-0">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-[#008A68]" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
-                      <circle cx="12" cy="12" r="6" stroke="#D97706" strokeWidth="1.5" />
-                      <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" stroke="#D97706" strokeWidth="0.8" opacity="0.6" />
-                    </svg>
+                {/* Specimen Trust Seal */}
+                <div className="mt-4 p-3 bg-white/5 rounded-none border border-white/10 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-none bg-[#E5252A] text-white flex items-center justify-center shrink-0 shadow-md">
+                    <Shield className="w-5 h-5 text-white" />
                   </div>
                   <div className="text-left flex-1 min-w-0">
-                    <p className="text-xs font-bold text-slate-900 leading-tight">
+                    <p className="text-xs font-bold text-white leading-tight">
                       {currentSlide.specBadge.title}
                     </p>
-                    <p className="text-[11px] text-stone-600 leading-tight mt-0.5 truncate">
+                    <p className="text-[11px] text-stone-400 leading-tight mt-0.5 truncate">
                       {currentSlide.specBadge.sub}
                     </p>
                   </div>
                 </div>
 
                 {/* Quick Slide Navigation Dots inside Card footer */}
-                <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-600">
+                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-stone-400">
                   <div className="flex items-center gap-1.5">
                     <button
                       onClick={handlePrev}
-                      className="w-5 h-5 rounded-full flex items-center justify-center text-stone-500 hover:text-stone-800 hover:bg-stone-100 transition-colors cursor-pointer"
+                      className="w-6 h-6 rounded-none flex items-center justify-center text-stone-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                       aria-label="Previous slide"
                       title="Previous slide"
                     >
-                      <ChevronLeft className="w-3.5 h-3.5" />
+                      <ChevronLeft className="w-4 h-4" />
                     </button>
 
                     <div className="flex items-center gap-1.5">
@@ -559,10 +553,10 @@ export const Hero: React.FC<HeroProps> = ({
                         <button
                           key={dotIdx}
                           onClick={() => setCurrentSlideIndex(dotIdx)}
-                          className={`h-2 rounded-full transition-all cursor-pointer ${
+                          className={`h-2 transition-all cursor-pointer rounded-none ${
                             dotIdx === currentSlideIndex
-                              ? 'w-6 bg-[#008A68]'
-                              : 'w-2 bg-stone-300 hover:bg-stone-400'
+                              ? 'w-6 bg-[#E5252A]'
+                              : 'w-2 bg-stone-700 hover:bg-stone-500'
                           }`}
                           aria-label={`Jump to slide ${dotIdx + 1}`}
                         />
@@ -571,17 +565,17 @@ export const Hero: React.FC<HeroProps> = ({
 
                     <button
                       onClick={handleNext}
-                      className="w-5 h-5 rounded-full flex items-center justify-center text-stone-500 hover:text-stone-800 hover:bg-stone-100 transition-colors cursor-pointer"
+                      className="w-6 h-6 rounded-none flex items-center justify-center text-stone-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                       aria-label="Next slide"
                       title="Next slide"
                     >
-                      <ChevronRight className="w-3.5 h-3.5" />
+                      <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
 
                   <button
                     onClick={onFindCentreClick}
-                    className="font-semibold text-[#008A68] hover:text-[#007256] underline cursor-pointer"
+                    className="font-bold text-[#E5A93C] hover:text-amber-300 underline cursor-pointer text-xs"
                   >
                     Join a Dojo in Odisha →
                   </button>
@@ -593,32 +587,32 @@ export const Hero: React.FC<HeroProps> = ({
       </div>
 
       {/* ========================================================================= */}
-      {/* 4. LIGHT ODIA FOUR-PILLAR STATE STATS RIBBON (LOWER FOLD)                 */}
+      {/* 4. SLEEK FOUR-PILLAR STATE STATS RIBBON (LOWER FOLD)                      */}
       {/* ========================================================================= */}
-      <div className="relative z-10 bg-white/95 border-t border-amber-200/80 py-4 sm:py-5">
+      <div className="relative z-10 bg-[#0E0F12] border-t border-white/10 py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center sm:text-left">
-            <div className="p-2 border-r border-stone-100 last:border-none">
-              <p className="text-xl sm:text-2xl font-extrabold text-[#008A68]">14+ Districts</p>
-              <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-0.5">Verified Odisha Dojos</p>
+            <div className="p-2 border-r border-white/10 last:border-none">
+              <p className="text-xl sm:text-2xl font-black text-white">14+ Districts</p>
+              <p className="text-xs sm:text-sm font-semibold text-stone-300 mt-0.5">Verified Odisha Dojos</p>
               <p className="text-[11px] text-stone-500">Bhubaneswar, Cuttack & all regions</p>
             </div>
 
-            <div className="p-2 border-r border-stone-100 last:border-none">
-              <p className="text-xl sm:text-2xl font-extrabold text-amber-700">2,500+</p>
-              <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-0.5">Active Practitioners</p>
+            <div className="p-2 border-r border-white/10 last:border-none">
+              <p className="text-xl sm:text-2xl font-black text-[#E5252A]">2,500+</p>
+              <p className="text-xs sm:text-sm font-semibold text-stone-300 mt-0.5">Active Practitioners</p>
               <p className="text-[11px] text-stone-500">Kids, youths, girls & adults</p>
             </div>
 
-            <div className="p-2 border-r border-stone-100 last:border-none">
-              <p className="text-xl sm:text-2xl font-extrabold text-[#008A68]">40+ Years</p>
-              <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-0.5">Martial Lineage</p>
+            <div className="p-2 border-r border-white/10 last:border-none">
+              <p className="text-xl sm:text-2xl font-black text-[#E5A93C]">40+ Years</p>
+              <p className="text-xs sm:text-sm font-semibold text-stone-300 mt-0.5">Martial Lineage</p>
               <p className="text-[11px] text-stone-500">Established worldwide in 1981</p>
             </div>
 
             <div className="p-2">
-              <p className="text-xl sm:text-2xl font-extrabold text-amber-700">100% Certified</p>
-              <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-0.5">Official State Syllabus</p>
+              <p className="text-xl sm:text-2xl font-black text-emerald-400">100% Certified</p>
+              <p className="text-xs sm:text-sm font-semibold text-stone-300 mt-0.5">Official State Syllabus</p>
               <p className="text-[11px] text-stone-500">Authorized belt examiners only</p>
             </div>
           </div>

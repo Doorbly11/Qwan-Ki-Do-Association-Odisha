@@ -47,15 +47,15 @@ export const NewsSection: React.FC = () => {
         >
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
-              <span>Official Association Dispatch</span>
+              <span>News & Updates</span>
               <span aria-hidden="true">·</span>
-              <span>Odisha Bureau</span>
+              <span>Odisha State</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
               News & Student Achievements
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Official press bulletins, state team selections, convocation results, and community outreach initiatives
+              Read the latest announcements, tournament results, student belt promotions, and community sports events
               from Qwan Ki Do Association Odisha.
             </p>
           </div>

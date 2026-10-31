@@ -21,23 +21,26 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdminGuide }) 
           {/* Col 1: Identity & Crest */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-emerald-950 flex items-center justify-center border border-emerald-700/50 shrink-0">
-                <Shield className="w-6 h-6 text-emerald-400" />
+              <div className="w-12 h-12 rounded-none bg-[#E5252A] flex items-center justify-center shrink-0 shadow-md">
+                <Shield className="w-6 h-6 text-white" />
               </div>
-              <div>
-                <span className="font-serif text-lg font-bold text-white tracking-tight block">
-                  {associationInfo.name || 'Qwan Ki Do Association Odisha'}
+              <div className="flex flex-col">
+                <span className="font-extrabold text-xl tracking-tight text-[#E5A93C] uppercase leading-none">
+                  QWANKIDIO
                 </span>
-                <span className="text-[11px] text-emerald-400">
+                <span className="text-[11px] text-white font-bold tracking-widest uppercase mt-0.5">
+                  ASSOCIATION ODISHA
+                </span>
+                <span className="text-[10px] text-stone-400 mt-1">
                   Quán Khí Đạo · Sino-Vietnamese Martial Arts
                 </span>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-stone-400 leading-relaxed max-w-md">
-              The authorized state governing body for the practice, development, and official certification of
-              traditional Qwan Ki Do martial arts across Odisha. Affiliated with the Qwan Ki Do Federation of India
-              and the World Union of Qwan Ki Do.
+              The official state body for Qwan Ki Do martial arts in Odisha. We provide safe training,
+              certified belt tests, and official state tournaments across all districts. Affiliated with the
+              Qwan Ki Do Federation of India and the World Union of Qwan Ki Do.
             </p>
 
             <div className="pt-2 text-xs text-stone-400 space-y-1.5">

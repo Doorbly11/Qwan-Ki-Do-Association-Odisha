@@ -72,7 +72,7 @@ export const InstructorCertification: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
           <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
-            <span>Pedagogical Standards & Licensure</span>
+            <span>Teacher Training & Standards</span>
             <span aria-hidden="true">·</span>
             <span>Accredited Teaching</span>
           </div>
@@ -80,8 +80,8 @@ export const InstructorCertification: React.FC = () => {
             Become a Certified Qwan Ki Do Instructor
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            In Qwan Ki Do, the role of an instructor (Huấn Luyện Viên / Võ Sư) is a sacred trust.
-            We strictly differentiate between technical rank (holding a Black Sash) and authorized pedagogical license to teach.
+            In Qwan Ki Do, teaching students is an important responsibility.
+            Holding a Black Belt shows your personal skill, but running classes requires a teaching license to ensure every child and adult learns safely.
           </p>
         </div>
 
@@ -89,10 +89,10 @@ export const InstructorCertification: React.FC = () => {
         <div className="mb-12 p-5 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-4">
           <AlertTriangle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
           <div className="text-xs sm:text-sm text-amber-900 leading-relaxed">
-            <p className="font-bold">CRITICAL GOVERNANCE PRINCIPLE:</p>
+            <p className="font-bold">IMPORTANT NOTE ON TEACHING:</p>
             <p className="mt-1">
-              Holding a 1st Đẳng Black Belt or higher does <strong>NOT</strong> automatically qualify an individual to operate an independent dojo or teach students.
-              Teaching authorization requires completing the official Association Pedagogical Course, passing child safeguarding and emergency first-aid vetting, and receiving an official annual Teaching License from the State Technical Committee.
+              Holding a Black Belt does <strong>NOT</strong> mean you can automatically open a school or teach students on your own.
+              Instructors must complete our official teacher training course, pass child safety and basic first aid checks, and receive an annual Teaching License from the State Technical Committee.
             </p>
           </div>
         </div>
@@ -109,10 +109,10 @@ export const InstructorCertification: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
-                    1. Verified Technical Proficiency
+                    1. Recognized Black Belt
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    Must hold an officially recognized 1st Đẳng (Huyền Đai) or above, registered with the Qwan Ki Do Federation of India and World Union of Qwan Ki Do, with continuous active dojo practice.
+                    Must hold an officially registered 1st Đẳng Black Belt or higher, recognized by the national federation and World Union, with active regular practice.
                   </p>
                 </div>
               </div>
@@ -121,10 +121,10 @@ export const InstructorCertification: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
-                    2. Child Safeguarding & Code of Conduct
+                    2. Child Safety & Good Conduct
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    Complete the mandatory child protection seminar, background verification, and commit to transparent, non-violent, positive teaching methodologies.
+                    Complete our child safety workshop, pass identity checks, and promise to follow kind, positive, and non-violent teaching methods.
                   </p>
                 </div>
               </div>
@@ -133,10 +133,10 @@ export const InstructorCertification: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
-                    3. First Aid & Sports Injury Management
+                    3. Basic First Aid & Injury Care
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    Hold a valid certification in basic CPR, concussion protocol, sprain management, and heat illness mitigation issued by an accredited institution.
+                    Know basic first aid, CPR, sprain care, and heat exhaustion safety to keep students healthy and protected during training.
                   </p>
                 </div>
               </div>
@@ -145,17 +145,17 @@ export const InstructorCertification: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-xs sm:text-sm font-semibold text-slate-900">
-                    4. Annual License Renewal & Seminars
+                    4. Annual License Renewal
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    Licenses are valid for one calendar year. Instructors must attend the annual State Technical Refresher Seminar to maintain syllabus consistency and active credentials.
+                    Licenses are renewed every year. Instructors attend an annual state refresher workshop to keep teaching quality high and uniform across Odisha.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="p-4 bg-stone-100 rounded-lg text-xs text-slate-600">
-              <span className="font-semibold text-slate-800">Legal Notice on Unauthorized Teaching:</span> Operating an unauthorized school or fabricating certificates under the name of Qwan Ki Do Association Odisha will result in legal action and lifetime disqualification under state society bylaws.
+              <span className="font-semibold text-slate-800">Important Rule:</span> Opening an unapproved club or printing fake certificates using the name of Qwan Ki Do Association Odisha is strictly against association rules and will result in permanent disqualification.
             </div>
           </div>
 
@@ -201,10 +201,10 @@ export const InstructorCertification: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <h3 className="font-serif text-lg font-bold text-slate-900 mb-1">
-                    Apply for Teaching Accreditation
+                    Apply for an Instructor License
                   </h3>
                   <p className="text-xs text-slate-500">
-                    All applications are scrutinized by the State Technical Council.
+                    All applications are reviewed by our State Technical Committee.
                   </p>
                 </div>
 
@@ -379,7 +379,7 @@ export const InstructorCertification: React.FC = () => {
                       className="mt-0.5 rounded text-[#008A68] focus:ring-[#008A68]"
                     />
                     <span>
-                      I declare that all technical credentials provided are authentic. I agree to undergo the mandatory child safeguarding assessment and understand that teaching authorization is subject to committee sanction.
+                      I confirm that my belt certificates are genuine. I agree to child safety checks and understand that teaching permission is granted by the State Association.
                     </span>
                   </label>
                 </div>
@@ -423,7 +423,7 @@ export const InstructorCertification: React.FC = () => {
                 Official Credential Specimen · Qwan Ki Do Association Odisha
               </span>
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-900 tracking-wide uppercase">
-                Certificate of Pedagogical Licensure
+                Official Instructor Teaching License
               </h3>
               <p className="text-xs font-serif italic text-stone-600 mt-1">
                 Văn Bằng Huấn Luyện Viên Võ Thuật Qwan Ki Do Odisha
@@ -434,7 +434,7 @@ export const InstructorCertification: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center my-6 py-4 border-y border-amber-200/80">
               <div className="md:col-span-8 space-y-2 text-xs sm:text-sm text-slate-700 leading-relaxed">
                 <p>
-                  This official document certifies that the authorized instructor has successfully passed the state technical examinations, met ethical child-safeguarding standards, and holds active licensure to conduct Qwan Ki Do dojo instruction within the State of Odisha.
+                  This official document confirms that the instructor has passed state teaching examinations, completed child safety checks, and is authorized to run a Qwan Ki Do training club in the State of Odisha.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-2 text-xs font-mono text-stone-600">
                   <span><strong>Serial:</strong> QKD-OD-2025-LIC</span>

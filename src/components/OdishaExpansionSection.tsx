@@ -187,9 +187,9 @@ Notes: ${formData.additionalNotes || 'Standard State Curriculum'}`;
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
-            Qwan Ki Do Association of Odisha is committed to taking disciplined martial training, women’s self-defense,
-            and physical vitality to every school, college, town, and rural block of our state. Rooted in Odisha’s proud
-            tradition of bravery and fitness, we welcome education leaders and coaches to join hands with us.
+            Qwan Ki Do Association of Odisha is working to bring martial arts, women’s self-defense,
+            and good health to every school, college, town, and village across our state. We warmly invite school principals,
+            physical education teachers, and sports coaches to partner with us.
           </p>
 
           {/* Quick Stat Bar */}
@@ -241,7 +241,7 @@ Notes: ${formData.additionalNotes || 'Standard State Curriculum'}`;
                   School & College Curriculum
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                  Introduce structured martial arts within physical education (P.E.) periods or after-school activity clubs. Complete safety, police-vetted instructors, and grade certification.
+                  Bring martial arts into physical education (P.E.) classes or after-school clubs. We provide certified instructors, safe practice, and official belt exams.
                 </p>
                 <ul className="space-y-1.5 text-xs text-slate-700 mb-6">
                   <li className="flex items-center gap-1.5">
@@ -284,7 +284,7 @@ Notes: ${formData.additionalNotes || 'Standard State Curriculum'}`;
                   Girls & Women Self-Defense Camps
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                  Intensive 3-day or 7-day mobile workshops conducted at women’s colleges, hostels, corporate offices, and Mission Shakti SHG groups across Odisha.
+                  Practical 3-day or 7-day workshops at girls' schools, colleges, hostels, workplaces, and self-help groups across Odisha to teach real-life safety skills.
                 </p>
                 <ul className="space-y-1.5 text-xs text-slate-700 mb-6">
                   <li className="flex items-center gap-1.5">
@@ -327,7 +327,7 @@ Notes: ${formData.additionalNotes || 'Standard State Curriculum'}`;
                   Start an Affiliated Dojo
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                  For martial arts black belts, Karate/Taekwondo coaches, and fitness trainers wanting to launch an official Qwan Ki Do branch in their town with state backing.
+                  For black belts, martial arts coaches, and fitness trainers who want to open an official Qwan Ki Do training club in their town with state backing.
                 </p>
                 <ul className="space-y-1.5 text-xs text-slate-700 mb-6">
                   <li className="flex items-center gap-1.5">
@@ -364,13 +364,13 @@ Notes: ${formData.additionalNotes || 'Standard State Curriculum'}`;
                   <Users className="w-6 h-6" />
                 </div>
                 <div className="text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                  Grassroots Outreach
+                  Village & Community
                 </div>
                 <h4 className="font-serif text-lg font-bold text-slate-900 mb-2">
                   Rural & Panchayat Youth Camps
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                  Weekend training camps at block headquarters, rural sports complexes, and village grounds. We provide subsidized training gear and talent scouting.
+                  Weekend sports camps in village grounds and local sports complexes. We provide subsidized training uniforms, gear, and discover talented young athletes.
                 </p>
                 <ul className="space-y-1.5 text-xs text-slate-700 mb-6">
                   <li className="flex items-center gap-1.5">

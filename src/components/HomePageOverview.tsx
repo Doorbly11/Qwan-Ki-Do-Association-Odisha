@@ -19,6 +19,7 @@ import {
   ChevronRight,
   PhoneCall,
   CheckCircle2,
+  Lock,
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -34,9 +35,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
   const PAGE_CARDS = [
     {
       id: 'about',
-      badge: 'Heritage & Lineage',
+      badge: 'Our Heritage',
       title: 'About Qwan Ki Do',
-      description: 'Sino-Vietnamese martial traditions, Master Pham Xuan Tong, and 40+ years of martial history.',
+      description: 'Our history, founder Grandmaster Pham Xuan Tong, and 40+ years of martial arts practice worldwide.',
       icon: BookOpen,
       iconColor: 'text-[#008A68]',
       bgColor: 'bg-emerald-50/60',
@@ -44,9 +45,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'governing',
-      badge: 'Official Credentials',
+      badge: 'Our Leaders',
       title: 'Governing Body & Leadership',
-      description: 'Executive committee, technical directorate, district officers, and registered state recognition.',
+      description: 'Meet our state committee members, technical coaches, and district heads across Odisha.',
       icon: Shield,
       iconColor: 'text-amber-700',
       bgColor: 'bg-amber-50/60',
@@ -54,9 +55,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'programmes',
-      badge: 'All Age Groups',
+      badge: 'For All Ages',
       title: 'Training Programmes',
-      description: 'Children vo-sinh, youth sport combat, adult self-defense, Co Vo Dao weapons, and Khí Công wellness.',
+      description: 'Fun classes for kids, active teen sparring, adult self-defense, traditional weapons, and wellness.',
       icon: Layers,
       iconColor: 'text-blue-700',
       bgColor: 'bg-blue-50/60',
@@ -64,9 +65,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'journey',
-      badge: 'Syllabus Path',
+      badge: 'Learning Steps',
       title: '6-Stage Training Journey',
-      description: 'Structured path from white sash novice through black belt and master technical degree levels.',
+      description: 'A clear step-by-step path from white belt beginner to black belt and master level.',
       icon: UserCheck,
       iconColor: 'text-purple-700',
       bgColor: 'bg-purple-50/60',
@@ -74,9 +75,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'belts',
-      badge: 'Grading & Stripes',
+      badge: 'Belts & Stripes',
       title: 'Belt & Rank Explorer',
-      description: 'Traditional sash system, yellow stripes, examination rules, time-in-grade, and insignias.',
+      description: 'Learn about belt colors, yellow stripes, minimum practice time, and test guidelines.',
       icon: Award,
       iconColor: 'text-amber-800',
       bgColor: 'bg-amber-50/60',
@@ -84,9 +85,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'centres',
-      badge: 'District Dojos',
+      badge: 'Find a Class',
       title: 'Odisha Centres & Dojos',
-      description: 'Authorized centres in Bhubaneswar, Cuttack, Puri, Rourkela, Berhampur, Sambalpur, and Balasore.',
+      description: 'Certified training centres in Bhubaneswar, Cuttack, Puri, Rourkela, Berhampur, Sambalpur, and Balasore.',
       icon: MapPin,
       iconColor: 'text-[#008A68]',
       bgColor: 'bg-emerald-50/60',
@@ -94,9 +95,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'expansion',
-      badge: 'Statewide Mission',
+      badge: 'All 30 Districts',
       title: 'Mission 30 Districts Expansion',
-      description: 'Active expansion initiative to establish training centres and school curricula across all 30 districts.',
+      description: 'Our initiative to bring martial arts training and school self-defense to every district in Odisha.',
       icon: Compass,
       iconColor: 'text-amber-700',
       bgColor: 'bg-amber-100/70',
@@ -104,9 +105,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'rules',
-      badge: 'Code of Conduct',
+      badge: 'Safety & Respect',
       title: 'Rules & Dojo Etiquette',
-      description: 'Official dojo discipline, salutation (Bái), safety standards, training uniform guidelines, and ethics.',
+      description: 'Simple rules for bowing respectfully, clean uniform care, safety gear, and good manners.',
       icon: FileText,
       iconColor: 'text-slate-700',
       bgColor: 'bg-stone-50',
@@ -114,9 +115,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'instructors',
-      badge: 'Black Belt Standards',
+      badge: 'Certified Coaches',
       title: 'Instructor Certification',
-      description: 'Official coaching eligibility, state examiner accreditations, and national federation licensing.',
+      description: 'How our coaches are trained, tested, and licensed to teach students safely.',
       icon: UserCheck,
       iconColor: 'text-emerald-700',
       bgColor: 'bg-emerald-50/60',
@@ -124,9 +125,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'benefits',
-      badge: 'Health & Mind',
+      badge: 'Health & Focus',
       title: 'Benefits of Training',
-      description: 'Physical agility, mental clarity, anti-bullying defense, women empowerment, and vitality.',
+      description: 'Better fitness, study focus, everyday self-defense, women’s confidence, and lifelong health.',
       icon: Heart,
       iconColor: 'text-rose-700',
       bgColor: 'bg-rose-50/60',
@@ -134,9 +135,9 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'gallery',
-      badge: 'Photo Archive',
+      badge: 'Photo Gallery',
       title: 'Official Image Gallery',
-      description: 'Documentary photo archive with headlines across state championships, belt ceremonies, and dojo training.',
+      description: 'Photos from our classes, tournaments, medal ceremonies, and belt examinations.',
       icon: Image,
       iconColor: 'text-blue-700',
       bgColor: 'bg-blue-50/60',
@@ -144,13 +145,23 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
     },
     {
       id: 'enquiry',
-      badge: 'Admissions & Help',
+      badge: 'Join or Contact',
       title: 'Admissions & Contact',
-      description: 'Direct student enrollment, school affiliation request, state secretary desk, and FAQ guidance.',
+      description: 'Join a class near you, request a school workshop, or speak with our state office.',
       icon: MessageSquare,
       iconColor: 'text-[#008A68]',
       bgColor: 'bg-emerald-50/60',
       borderColor: 'border-emerald-200',
+    },
+    {
+      id: 'admin',
+      badge: 'Staff & CMS',
+      title: 'Admin Panel & CMS',
+      description: 'Password-protected control panel to manage dojos, syllabus, events, and student enquiries.',
+      icon: Lock,
+      iconColor: 'text-amber-700',
+      bgColor: 'bg-amber-50/60',
+      borderColor: 'border-amber-300',
     },
   ];
 
@@ -164,25 +175,25 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
       />
 
       {/* 2. Statewide Expansion Banner Spotlight (Connecting to All 30 Districts) */}
-      <section className="bg-gradient-to-r from-amber-50 via-white to-amber-50/80 border-b border-amber-200/90 py-8 sm:py-10">
+      <section className="bg-[#0B0C0E] border-b border-white/10 py-8 sm:py-10 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-white border border-amber-300 shadow-sm">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-none bg-[#14161A] border border-white/15 shadow-xl">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center shrink-0">
-                <Compass className="w-6 h-6 text-amber-700 animate-spin-slow" />
+              <div className="w-12 h-12 rounded-none bg-[#E5252A] flex items-center justify-center shrink-0 shadow-md">
+                <Compass className="w-6 h-6 text-white animate-spin-slow" />
               </div>
               <div>
-                <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold mb-1.5 border border-amber-300">
+                <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-none bg-amber-500/20 text-amber-300 text-[11px] font-bold mb-1.5 border border-amber-500/30 uppercase tracking-wider">
                   <span>ରାଜ୍ୟସ୍ତରୀୟ ପ୍ରସାର ଅଭିଯାନ</span>
                   <span>·</span>
                   <span>MISSION ALL-ODISHA</span>
                 </div>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
-                  Expanding Standardized Training Across All 30 Districts of Odisha
+                <h2 className="text-xl sm:text-2xl font-black text-white leading-snug uppercase tracking-tight">
+                  Bringing Martial Arts & Self-Defense to All 30 Districts of Odisha
                 </h2>
-                <p className="text-xs sm:text-sm text-stone-600 mt-1 max-w-2xl leading-relaxed">
-                  We are actively establishing school tie-ups, club affiliations, and district coordinator centres
-                  in Mayurbhanj, Koraput, Balangir, Sambalpur, Ganjam, and beyond.
+                <p className="text-xs sm:text-sm text-stone-300 mt-1 max-w-2xl leading-relaxed">
+                  We are partnering with schools, colleges, and local clubs to bring safe training to students
+                  in Mayurbhanj, Koraput, Balangir, Sambalpur, Ganjam, and across our state.
                 </p>
               </div>
             </div>
@@ -190,16 +201,16 @@ export const HomePageOverview: React.FC<HomePageOverviewProps> = ({
             <div className="flex flex-wrap items-center gap-3 shrink-0">
               <button
                 onClick={() => onNavigate('expansion')}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-700 hover:bg-amber-800 text-white text-xs sm:text-sm font-semibold shadow-xs hover:shadow-md transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-none bg-[#E5252A] hover:bg-[#D01F24] active:bg-[#B8191E] text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap"
               >
-                <span>Explore 30-District Mission</span>
+                <span>Mission 30 Districts Expansion</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
                 onClick={() => onNavigate('centres')}
-                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-stone-50 text-slate-700 text-xs sm:text-sm font-medium border border-stone-300 shadow-2xs transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-none bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold uppercase tracking-wider border border-white/20 hover:border-white shadow-2xs transition-all cursor-pointer whitespace-nowrap"
               >
-                <MapPin className="w-4 h-4 text-[#008A68]" />
+                <MapPin className="w-4 h-4 text-[#E5A93C]" />
                 <span>View Existing Dojos</span>
               </button>
             </div>

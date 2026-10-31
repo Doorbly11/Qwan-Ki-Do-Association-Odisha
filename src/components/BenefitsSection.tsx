@@ -17,16 +17,16 @@ export const BenefitsSection: React.FC = () => {
           className="max-w-3xl mb-12"
         >
           <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
-            <span>Holistic Development</span>
+            <span>Health & Character</span>
             <span aria-hidden="true">·</span>
-            <span>Evidence-Based Training</span>
+            <span>For Kids, Youth & Adults</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-            The Multi-Dimensional Benefits of Qwan Ki Do
+            How Qwan Ki Do Helps You Grow
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Martial arts is far more than physical movements. Rooted in disciplined pedagogy, Qwan Ki Do nurtures
-            coordination, emotional poise, cooperative respect, and lifelong healthy habits.
+            Martial arts is more than just kicks and punches. Practicing Qwan Ki Do helps you stay fit,
+            build strong study focus, learn everyday self-defense, and make good friends in a positive environment.
           </p>
         </motion.div>
 

@@ -40,16 +40,16 @@ export const BeltRankExplorer: React.FC = () => {
           className="max-w-3xl mb-12"
         >
           <div className="flex items-center gap-2 text-xs font-semibold text-[#008A68] uppercase tracking-wider mb-2">
-            <span>Syllabus & Insignia</span>
+            <span>Belt Ranks & Progress</span>
             <span aria-hidden="true">·</span>
-            <span>Traditional Sash System</span>
+            <span>From White to Black Belt</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             Belt & Rank Explorer
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            In Qwan Ki Do, rank insignia reflects personal transformation, perseverance, and adherence to martial virtue.
-            Our traditional grading system preserves the Sino-Vietnamese sash heritage—advancing from the pure White Sash (Bạch Đai) through progressive Cấp grades to Black Belt (Đẳng).
+            In Qwan Ki Do, belts represent personal effort, discipline, and respect.
+            Students start with a White Belt (Bạch Đai), advance step-by-step through coloured stripes (Cấp), and work toward the Black Belt (Đẳng) with consistent practice.
           </p>
         </motion.div>
 
@@ -57,7 +57,7 @@ export const BeltRankExplorer: React.FC = () => {
         <div className="mb-8 p-4 bg-emerald-50/70 border border-emerald-200 rounded-lg flex items-start gap-3">
           <ShieldAlert className="w-5 h-5 text-[#008A68] shrink-0 mt-0.5" />
           <div className="text-xs sm:text-sm text-emerald-900 leading-relaxed">
-            <span className="font-semibold">Official Grading Notice:</span> Rank progression, eligibility, and certification are subject to the official grading syllabus and approval of authorized Qwan Ki Do examiners.
+            <span className="font-semibold">Official Belt Exam Notice:</span> Advancing to the next belt requires completing the required practice months, mastering the moves, and passing the test with certified state examiners.
           </div>
         </div>
 
@@ -361,9 +361,9 @@ export const BeltRankExplorer: React.FC = () => {
                   )}
                 </div>
 
-                {/* Reconciliation Note between Odisha & World Union */}
+                {/* International Alignment Note */}
                 <div className="pt-4 border-t border-stone-200 text-xs text-slate-500">
-                  <span className="font-semibold text-slate-700">Technical Alignment:</span> Syllabus and rank nomenclature comply with the regulations of the World Union of Qwan Ki Do. Any local variances are reviewed annually by the State Technical Director.
+                  <span className="font-semibold text-slate-700">International Standards:</span> All belt ranks and exam requirements follow the official rules of the World Union of Qwan Ki Do so your belt certificate is recognized worldwide.
                 </div>
               </motion.div>
             </AnimatePresence>

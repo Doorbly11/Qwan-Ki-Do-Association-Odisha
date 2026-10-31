@@ -50,7 +50,7 @@ export const GoverningBodySection: React.FC<GoverningBodySectionProps> = ({
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-semibold uppercase tracking-wider text-[#008A68] mb-4 shadow-2xs">
             <Shield className="w-3.5 h-3.5" />
-            <span>Official State Hierarchy & Administration</span>
+            <span>State Association Leadership</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-4">
@@ -58,9 +58,8 @@ export const GoverningBodySection: React.FC<GoverningBodySectionProps> = ({
           </h2>
 
           <p className="text-sm sm:text-base text-stone-600 leading-relaxed">
-            The Executive Committee, State Technical Commission, and District Coordinators authorized
-            to uphold traditional standards, conduct certified belt examinations, and govern Qwan Ki Do
-            across all districts in Odisha.
+            Meet the dedicated team that runs Qwan Ki Do in Odisha. Our committee members, technical coaches,
+            and district heads work together to keep training safe, conduct official belt tests, and support students across the state.
           </p>
 
           {/* Statutory Credential Badges */}

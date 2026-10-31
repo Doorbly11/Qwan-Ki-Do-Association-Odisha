@@ -16,18 +16,18 @@ export const AnnouncementBar: React.FC<AnnouncementBarProps> = ({ onNavigateToEv
     <div
       role="region"
       aria-label="Official Association Announcement Banner"
-      className="relative bg-amber-50 text-amber-950 text-xs sm:text-sm py-2 px-4 border-b border-amber-200 transition-colors z-50 shadow-xs"
+      className="relative bg-[#111215] text-stone-300 text-xs sm:text-sm py-2 px-4 border-b border-white/10 transition-colors z-50 shadow-sm"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-2.5 overflow-hidden">
-          {/* Dispatch badge in light warm style */}
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-200/80 text-amber-900 border border-amber-300 shrink-0">
-            <Megaphone className="w-3 h-3 text-amber-700 animate-pulse" />
+          {/* Dispatch badge in sharp square red style */}
+          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-none text-[10px] font-bold uppercase tracking-wider bg-[#E5252A] text-white shrink-0">
+            <Megaphone className="w-3 h-3 text-white animate-pulse" />
             <span>Notice</span>
           </span>
 
-          <p className="truncate text-slate-800 text-xs sm:text-sm">
-            <span className="font-semibold text-slate-900">State Update:</span>{' '}
+          <p className="truncate text-stone-300 text-xs sm:text-sm">
+            <span className="font-semibold text-white">State Update:</span>{' '}
             {announcementText}
           </p>
         </div>
@@ -35,7 +35,7 @@ export const AnnouncementBar: React.FC<AnnouncementBarProps> = ({ onNavigateToEv
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={onNavigateToEvents}
-            className="group inline-flex items-center gap-1 text-xs font-semibold text-[#008A68] hover:text-[#007256] underline transition-colors cursor-pointer"
+            className="group inline-flex items-center gap-1 text-xs font-semibold text-[#E5A93C] hover:text-amber-300 underline transition-colors cursor-pointer"
           >
             <span>View Details</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
@@ -44,7 +44,7 @@ export const AnnouncementBar: React.FC<AnnouncementBarProps> = ({ onNavigateToEv
           <button
             onClick={() => setDismissed(true)}
             aria-label="Dismiss announcement"
-            className="p-1 rounded text-stone-500 hover:text-slate-900 hover:bg-amber-100 transition-colors cursor-pointer"
+            className="p-1 rounded-none text-stone-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
           >
             <X className="w-3.5 h-3.5" />
           </button>

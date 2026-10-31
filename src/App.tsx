@@ -143,6 +143,11 @@ export default function App() {
 
   // Unified Page Navigation handler
   const handleNavigate = (pageId: string) => {
+    if (pageId === 'admin' || pageId === 'settings') {
+      setIsAdminGuideOpen(true);
+      return;
+    }
+
     let target = pageId as PageId;
 
     // Normalizations for aliases
@@ -205,12 +210,12 @@ export default function App() {
         {currentPage === 'about' && (
           <div>
             <PageHeader
-              badge="AUTHENTIC SINO-VIETNAMESE MARTIAL TRADITION"
-              title="About Qwan Ki Do (Quán Khí Đạo)"
-              subtitle="Explore the historical heritage, Founder Master Pham Xuan Tong, Sino-Vietnamese lineage, and the founding philosophy of Tâm – Thể – Trí (Mind, Body, and Spirit)."
+              badge="TRADITIONAL MARTIAL ART"
+              title="About Qwan Ki Do"
+              subtitle="Learn about our history, our founder Grandmaster Pham Xuan Tong, and the values of a healthy body, calm mind, and kind heart."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'View Governing Body',
+                label: 'Meet Our Leadership',
                 onClick: () => handleNavigate('governing'),
                 icon: Shield,
               }}
@@ -222,7 +227,7 @@ export default function App() {
               nextPage={{
                 id: 'governing',
                 label: 'Governing Body & Leadership',
-                desc: 'Meet the official Executive Committee, Technical Council, and registered credentials of Odisha.',
+                desc: 'Meet our state committee, certified coaches, and district leaders across Odisha.',
               }}
             />
           </div>
@@ -231,12 +236,12 @@ export default function App() {
         {currentPage === 'governing' && (
           <div>
             <PageHeader
-              badge="OFFICIAL STATE GOVERNING BODY OF ODISHA"
+              badge="STATE LEADERSHIP"
               title="Governing Body & Leadership"
-              subtitle="Meet the State Executive Committee, Technical Directorate, District Conveners, and verified accreditation under Societies Registration Act XXI of 1860."
+              subtitle="Meet the team leading Qwan Ki Do in Odisha, our technical directors, and certified district officials."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'Contact Secretariat',
+                label: 'Contact Our Office',
                 onClick: () => handleNavigate('enquiry'),
                 icon: MessageSquare,
               }}
@@ -248,7 +253,7 @@ export default function App() {
               nextPage={{
                 id: 'programmes',
                 label: 'Training Programmes',
-                desc: 'Discover certified courses for children, youth combat, adult self-defense, and weapons.',
+                desc: 'Explore classes for kids, teenagers, adults, and self-defense.',
               }}
             />
           </div>
@@ -257,12 +262,12 @@ export default function App() {
         {currentPage === 'programmes' && (
           <div>
             <PageHeader
-              badge="STATE-CERTIFIED MARTIAL CURRICULUM"
+              badge="CLASSES FOR ALL AGES"
               title="Training Programmes & Courses"
-              subtitle="Age-appropriate training paths: Children Vo-Sinh, Youth competitive sparring, Adult self-defense, Co Vo Dao traditional weapons, and Khí Công wellness."
+              subtitle="Classes designed for everyone: children, teenagers, adults, women's self-defense, and traditional weapons."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'Enroll for Training',
+                label: 'Join a Class',
                 onClick: () => handleNavigate('enquiry'),
                 icon: MessageSquare,
               }}
@@ -276,7 +281,7 @@ export default function App() {
               nextPage={{
                 id: 'journey',
                 label: '6-Stage Training Journey',
-                desc: 'See the step-by-step progression pathway from initiation to technical master degrees.',
+                desc: 'See how a student grows step-by-step from beginner to black belt.',
               }}
             />
           </div>
@@ -285,12 +290,12 @@ export default function App() {
         {currentPage === 'journey' && (
           <div>
             <PageHeader
-              badge="STRUCTURED TECHNICAL PROGRESSION"
+              badge="STEP-BY-STEP LEARNING"
               title="6-Stage Training Journey"
-              subtitle="A systematic pathway guiding martial artists from white sash initiation through yellow stripes, intermediate degrees, and advanced master ranking."
+              subtitle="A clear 6-step path that guides every student from white belt beginner all the way to master level."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'Belt & Rank Explorer',
+                label: 'Explore Belt Ranks',
                 onClick: () => handleNavigate('belts'),
                 icon: Award,
               }}
@@ -302,7 +307,7 @@ export default function App() {
               nextPage={{
                 id: 'belts',
                 label: 'Belt & Rank Explorer',
-                desc: 'Learn about traditional sash colors, yellow stripes, examination rules, and insignias.',
+                desc: 'Learn about belt colors, yellow stripes, and test rules.',
               }}
             />
           </div>
@@ -311,9 +316,9 @@ export default function App() {
         {currentPage === 'belts' && (
           <div>
             <PageHeader
-              badge="OFFICIAL GRADING & EXAMINATION RULES"
+              badge="BELTS & EXAMINATIONS"
               title="Belt & Rank Explorer"
-              subtitle="Traditional Sino-Vietnamese sash progression, examination requirements, time-in-grade, international accreditation, and official state insignias."
+              subtitle="Understand the belt system, test requirements, training time, and official ranks."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
                 label: 'Find a Training Centre',
@@ -328,7 +333,7 @@ export default function App() {
               nextPage={{
                 id: 'centres',
                 label: 'Odisha Centres & Dojos',
-                desc: 'Find authorized training centres and verified instructors across all districts of Odisha.',
+                desc: 'Find certified training centres and instructors near you in Odisha.',
               }}
             />
           </div>
@@ -337,9 +342,9 @@ export default function App() {
         {currentPage === 'centres' && (
           <div>
             <PageHeader
-              badge="AUTHORIZED ODISHA TRAINING ACADEMIES"
+              badge="TRAINING CENTRES IN ODISHA"
               title="Odisha Training Centres & Dojos"
-              subtitle="Verified directory of official academies in Bhubaneswar, Cuttack, Puri, Rourkela, Berhampur, Sambalpur, and Balasore with certified instructors and timings."
+              subtitle="Find certified training halls in Bhubaneswar, Cuttack, Puri, Rourkela, Berhampur, Sambalpur, and Balasore with class timings."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
                 label: 'Mission 30 Districts',
@@ -357,7 +362,7 @@ export default function App() {
               nextPage={{
                 id: 'expansion',
                 label: 'Mission All-Odisha (30 Districts)',
-                desc: 'Explore how we are bringing certified martial education to every district of Odisha.',
+                desc: 'Learn how we are bringing martial arts training to all 30 districts of Odisha.',
               }}
             />
           </div>
@@ -366,12 +371,12 @@ export default function App() {
         {currentPage === 'expansion' && (
           <div>
             <PageHeader
-              badge="ରାଜ୍ୟସ୍ତରୀୟ ପ୍ରସାର ଅଭିଯାନ · STATEWIDE INITIATIVE"
+              badge="MISSION ALL-ODISHA · 30 DISTRICTS"
               title="Mission All-Odisha: 30-District Expansion"
-              subtitle="Our dedicated initiative to establish training centres, school self-defence curricula, and grassroots youth academies in every single district of Odisha."
+              subtitle="Our plan to bring martial arts training, self-defense classes, and school workshops to all 30 districts of Odisha."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'Apply for District Centre',
+                label: 'Request a Centre in Your Area',
                 onClick: () => handleNavigate('enquiry'),
                 icon: MessageSquare,
               }}
@@ -390,7 +395,7 @@ export default function App() {
               nextPage={{
                 id: 'rules',
                 label: 'Rules & Dojo Etiquette',
-                desc: 'Read the official code of conduct, dojo ethics, and safety rules.',
+                desc: 'Read our simple rules for safety, respect, and uniform care.',
               }}
             />
           </div>
@@ -399,12 +404,12 @@ export default function App() {
         {currentPage === 'rules' && (
           <div>
             <PageHeader
-              badge="OFFICIAL CODE OF CONDUCT & SAFETY"
+              badge="SAFETY & RESPECT"
               title="Rules & Dojo Etiquette"
-              subtitle="Searchable guidelines on martial discipline, the traditional salutation (Bái), uniform care (Vo Phuc), safety equipment, and respectful dojo conduct."
+              subtitle="Simple guidelines for respectful bowing, clean uniforms, safe practice, and good behavior in class."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'Instructor Certification',
+                label: 'Coach Certification',
                 onClick: () => handleNavigate('instructors'),
                 icon: Award,
               }}
@@ -416,7 +421,7 @@ export default function App() {
               nextPage={{
                 id: 'instructors',
                 label: 'Instructor Certification',
-                desc: 'Check state coaching eligibility, instructor standards, and examiner prerequisites.',
+                desc: 'See how our coaches are trained and licensed to teach safely.',
               }}
             />
           </div>
@@ -425,12 +430,12 @@ export default function App() {
         {currentPage === 'instructors' && (
           <div>
             <PageHeader
-              badge="STATE COACHING ACCREDITATION"
+              badge="CERTIFIED COACHES"
               title="Instructor Certification & Licensing"
-              subtitle="Official criteria, black belt requirements, safety standards, and referee licenses required to coach Qwan Ki Do students in Odisha."
+              subtitle="How we train, test, and license qualified coaches to teach Qwan Ki Do safely in Odisha."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'Request Coach Affiliation',
+                label: 'Join as a Coach',
                 onClick: () => handleNavigate('enquiry'),
                 icon: MessageSquare,
               }}
@@ -442,7 +447,7 @@ export default function App() {
               nextPage={{
                 id: 'benefits',
                 label: 'Benefits of Training',
-                desc: 'Explore the 5 developmental pillars for children, youth, and adults.',
+                desc: 'Learn how training helps your body, mind, and confidence.',
               }}
             />
           </div>
@@ -451,12 +456,12 @@ export default function App() {
         {currentPage === 'benefits' && (
           <div>
             <PageHeader
-              badge="HOLISTIC PHYSICAL & MENTAL DEVELOPMENT"
+              badge="HEALTH & CONFIDENCE"
               title="Benefits of Qwan Ki Do Training"
-              subtitle="Discover how traditional Sino-Vietnamese martial practice develops physical stamina, focus for studies, self-defense, women’s confidence, and lifelong health."
+              subtitle="See how training improves fitness, study focus, everyday safety, and lifelong health for children, youth, and adults."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'Join a Dojo',
+                label: 'Find a Class Near You',
                 onClick: () => handleNavigate('centres'),
                 icon: MapPin,
               }}
@@ -468,7 +473,7 @@ export default function App() {
               nextPage={{
                 id: 'events',
                 label: 'State Championships & Events',
-                desc: 'View our annual competition schedule, championship venues, and referee clinics.',
+                desc: 'View tournament dates, state championships, and belt exams.',
               }}
             />
           </div>
@@ -477,12 +482,12 @@ export default function App() {
         {currentPage === 'events' && (
           <div>
             <PageHeader
-              badge="ANNUAL TOURNAMENTS & CHAMPIONSHIPS"
+              badge="TOURNAMENTS & EVENTS"
               title="Events, Tournaments & Seminars"
-              subtitle="State Championship calendar, regional qualifying trials, national games preparation, belt examination dates, and master clinics across Odisha."
+              subtitle="State championship dates, district competitions, belt test days, and training workshops across Odisha."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'News & Achievements',
+                label: 'Latest News & Medals',
                 onClick: () => handleNavigate('news'),
                 icon: Calendar,
               }}
@@ -494,7 +499,7 @@ export default function App() {
               nextPage={{
                 id: 'news',
                 label: 'News & Achievements',
-                desc: 'Read state medal records, tournament results, and district association news.',
+                desc: 'Read latest tournament results and student achievements.',
               }}
             />
           </div>
@@ -503,12 +508,12 @@ export default function App() {
         {currentPage === 'news' && (
           <div>
             <PageHeader
-              badge="OFFICIAL ANNOUNCEMENTS & PRESS RELEASES"
+              badge="LATEST UPDATES"
               title="News & Student Achievements"
-              subtitle="Stay informed with verified notifications, medal tallies from national games, district association updates, and athlete spotlights."
+              subtitle="Read about state medals, competition results, and achievements of students across Odisha."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
-                label: 'Photo Gallery',
+                label: 'View Photo Gallery',
                 onClick: () => handleNavigate('gallery'),
                 icon: Award,
               }}
@@ -520,7 +525,7 @@ export default function App() {
               nextPage={{
                 id: 'gallery',
                 label: 'Official Photo Gallery',
-                desc: 'Browse the documentary photo archive with headlines across state championships and dojos.',
+                desc: 'Browse photos from our classes, tournaments, and events.',
               }}
             />
           </div>
@@ -533,9 +538,9 @@ export default function App() {
         {currentPage === 'enquiry' && (
           <div>
             <PageHeader
-              badge="OFFICIAL ADMISSIONS & SECRETARIAT DESK"
-              title="Admissions, Affiliations & Contact"
-              subtitle="Apply to enroll in an authorized dojo, request a school or college self-defense workshop, or contact the State General Secretary directly."
+              badge="JOIN OR CONTACT US"
+              title="Admissions & Contact Desk"
+              subtitle="Join a local training centre, request a school self-defense workshop, or get in touch with our state office."
               onBackToHome={() => handleNavigate('home')}
               actionButton={{
                 label: 'Find Nearest Centre',

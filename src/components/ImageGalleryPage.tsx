@@ -109,15 +109,14 @@ export const ImageGalleryPage: React.FC<ImageGalleryPageProps> = ({ onBackToHome
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 text-xs font-bold text-[#008A68] uppercase tracking-wider mb-2">
             <Camera className="w-4 h-4" />
-            <span>Official Odisha Visual Chronicle</span>
+            <span>Official Photo Gallery</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
             Official Image Gallery
           </h1>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            A comprehensive visual record of martial arts excellence across Odisha. Browse authentic
-            championship bouts, sacred animal form demonstrations, youth training sessions, and annual belt
-            examinations with official headlines and captions.
+            Explore photos from across Odisha: state tournaments, traditional animal forms (Quyền),
+            children and youth training classes, and belt promotion exams.
           </p>
         </div>
 
